@@ -6,6 +6,7 @@ def msgCallback(client, userdata, message):
 sub = mqtt.Client(client_id="subscriber")
 sub.on_message = msgCallback
 
+sub.username_pw_set("user", password="1234")
 sub.connect(host = "192.168.0.175")
 sub.subscribe("/test")
 

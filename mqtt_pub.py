@@ -3,6 +3,7 @@ import time
 
 pub = mqtt.Client(client_id="publisher")
 
+pub.username_pw_set("user", password="1234")
 pub.connect(host = "192.168.0.175")
 
 pub.loop_start()
